@@ -6,8 +6,11 @@
 //
 
 #import "ComposeViewController.h"
+#import "Post.h"
 
 @interface ComposeViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *toPostImage;
+@property (weak, nonatomic) IBOutlet UITextView *toPostCaption;
 
 @end
 
@@ -29,6 +32,31 @@
     }
 
     [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    // Get the image captured by the UIImagePickerController
+    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    self.toPostImage.image = originalImage;
+
+    // Do something with the images (based on your use case)
+    
+    // Dismiss UIImagePickerController to go back to your original view controller
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)postThis:(id)sender {
+    [Post postUserImage:self.toPostImage.image withCaption:self.toPostCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+        if(succeeded) {
+            NSLog(@"Successfully posted image!");
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+        } else {
+            NSLog(@"Error posting image: %@", error);
+        }
+    }];
 }
 
 /*
