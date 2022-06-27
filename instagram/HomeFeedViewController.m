@@ -69,8 +69,10 @@
     
     cell.postCaption.text = post[@"caption"];
     cell.postImage.file = post[@"image"];
-    //[cell.postImage loadInBackground];
-    NSLog(@"@%@", cell.postCaption.text);
+    [cell.postImage loadInBackground];
+    NSLog(@"image");
+    NSLog(@"@%@", post[@"image"]);
+    NSLog(@"@%@", cell.postImage.image);
     return cell;
 }
 
