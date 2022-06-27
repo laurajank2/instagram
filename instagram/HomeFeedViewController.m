@@ -7,6 +7,8 @@
 
 #import "HomeFeedViewController.h"
 #import <Parse/Parse.h>
+#import "SceneDelegate.h"
+#import "LoginViewController.h"
 
 @interface HomeFeedViewController ()
 
@@ -21,7 +23,10 @@
 - (IBAction)didLogout:(id)sender {
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
         // PFUser.current() will now be nil
-        [self dismissViewControllerAnimated:true completion:nil];
+        SceneDelegate *sceneDelegate = (SceneDelegate *)self.view.window.windowScene.delegate;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        LoginViewController *loginViewcontroller = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        sceneDelegate.window.rootViewController = loginViewcontroller;
     }];
     
 }
