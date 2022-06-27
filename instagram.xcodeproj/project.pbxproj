@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831836FB286A5507000A2B81 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831836FA286A5507000A2B81 /* LoginViewController.m */; };
+		831836FE286A55EA000A2B81 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 831836FD286A55EA000A2B81 /* HomeFeedViewController.m */; };
 		83A00DFC286A4289000334FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A00DFB286A4289000334FC /* AppDelegate.m */; };
 		83A00DFF286A4289000334FC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A00DFE286A4289000334FC /* SceneDelegate.m */; };
 		83A00E02286A4289000334FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A00E01286A4289000334FC /* ViewController.m */; };
@@ -46,6 +48,10 @@
 		4D1F0FC91D83185C401F1896 /* Pods-instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.debug.xcconfig"; path = "Target Support Files/Pods-instagram/Pods-instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		6619875AF987E6D17748E3E1 /* Pods_instagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7091822237161AA7BCCC9B72 /* Pods-instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram.release.xcconfig"; path = "Target Support Files/Pods-instagram/Pods-instagram.release.xcconfig"; sourceTree = "<group>"; };
+		831836F9286A5507000A2B81 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		831836FA286A5507000A2B81 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		831836FC286A55EA000A2B81 /* HomeFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
+		831836FD286A55EA000A2B81 /* HomeFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		83A00DF7286A4289000334FC /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A00DFA286A4289000334FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83A00DFB286A4289000334FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,7 +112,6 @@
 				3A89E0F535AF7F4D1C2411F0 /* Pods-instagramTests.debug.xcconfig */,
 				C7FB7E9173DF53E18799C5A9 /* Pods-instagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,6 +150,8 @@
 		83A00DF9286A4289000334FC /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				831836FC286A55EA000A2B81 /* HomeFeedViewController.h */,
+				831836FD286A55EA000A2B81 /* HomeFeedViewController.m */,
 				83A00DFA286A4289000334FC /* AppDelegate.h */,
 				83A00DFB286A4289000334FC /* AppDelegate.m */,
 				83A00DFD286A4289000334FC /* SceneDelegate.h */,
@@ -152,6 +159,8 @@
 				83A00E00286A4289000334FC /* ViewController.h */,
 				83A00E01286A4289000334FC /* ViewController.m */,
 				83A00E03286A4289000334FC /* Main.storyboard */,
+				831836F9286A5507000A2B81 /* LoginViewController.h */,
+				831836FA286A5507000A2B81 /* LoginViewController.m */,
 				83A00E06286A4289000334FC /* Assets.xcassets */,
 				83A00E08286A4289000334FC /* LaunchScreen.storyboard */,
 				83A00E0B286A4289000334FC /* Info.plist */,
@@ -416,9 +425,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A00E02286A4289000334FC /* ViewController.m in Sources */,
+				831836FE286A55EA000A2B81 /* HomeFeedViewController.m in Sources */,
 				83A00DFC286A4289000334FC /* AppDelegate.m in Sources */,
 				83A00E0D286A4289000334FC /* main.m in Sources */,
 				83A00DFF286A4289000334FC /* SceneDelegate.m in Sources */,
+				831836FB286A5507000A2B81 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
