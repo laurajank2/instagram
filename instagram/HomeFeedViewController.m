@@ -9,8 +9,12 @@
 #import <Parse/Parse.h>
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
+#import "Post.h"
+#import "PostCell.h"
 
-@interface HomeFeedViewController ()
+@interface HomeFeedViewController ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) NSArray *posts;
+@property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 
 @end
 
@@ -19,6 +23,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // construct query
+    PFQuery *postQuery = [Post query];
+    [postQuery orderByDescending:@"createdAt"];
+    [postQuery includeKey:@"author"];
+    postQuery.limit = 20;
+
+    // fetch data asynchronously
+    [postQuery findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            // do something with the array of object returned by the call
+            self.posts = posts;
+            NSLog(@"the posts:");
+            NSLog(@"%@", self.posts);
+            [self.postsTableView reloadData];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
 }
 - (IBAction)didLogout:(id)sender {
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
@@ -29,6 +51,25 @@
         sceneDelegate.window.rootViewController = loginViewcontroller;
     }];
     
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.posts.count;
+}
+
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    PFObject *post = self.posts[indexPath.row];
+    
+    cell.postCaption.text = post[@"caption"];
+    cell.postImage.file = post[@"image"];
+    //[cell.postImage loadInBackground];
+    NSLog(@"@%@", cell.postCaption.text);
+    return cell;
 }
 
 /*
