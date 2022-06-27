@@ -6,6 +6,7 @@
 //
 
 #import "LoginViewController.h"
+#import "HomeFeedViewController.h"
 #import <Parse/Parse.h>
 
 @interface LoginViewController ()
@@ -36,6 +37,10 @@
                 NSLog(@"User registered successfully");
                 
                 // manually segue to logged in view
+                // display view controller that needs to shown after successful login
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                HomeFeedViewController *homeVC = [storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+                [self presentViewController:homeVC animated:YES completion:nil];
             }
         }];
 }
@@ -50,6 +55,7 @@
                 NSLog(@"User logged in successfully");
                 
                 // display view controller that needs to shown after successful login
+                [self performSegueWithIdentifier:@"loginSegue" sender:nil];
             }
         }];
 }

@@ -60,18 +60,19 @@
                     <connections>
                         <outlet property="passwordField" destination="1YP-3G-xeg" id="1Re-Wo-f15"/>
                         <outlet property="usernameField" destination="rqp-5v-SGl" id="WDo-5w-EAB"/>
+                        <segue destination="mpG-7O-cZY" kind="presentation" identifier="loginSegue" id="tpd-vO-Rn8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="61.607142857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Feed View Controller-->
         <scene sceneID="my4-3z-Vmj">
             <objects>
-                <viewController id="mpG-7O-cZY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="mpG-7O-cZY" customClass="HomeFeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vpk-ho-Cix">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="y6i-df-29Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
