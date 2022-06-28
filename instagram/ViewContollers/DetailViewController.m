@@ -22,6 +22,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.caption.text = self.post[@"caption"];
+    self.timeStamp.text = self.post[@"createdAt"];
+    NSLog(@"createdAt");
+    NSLog(@"@%@", self.post[@"createdAt"]);
     self.detailImage.file = self.post[@"image"];
     [self.detailImage loadInBackground];
 }

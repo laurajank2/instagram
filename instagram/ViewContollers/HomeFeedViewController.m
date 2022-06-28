@@ -94,12 +94,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    PostCell *cell = sender;
-    NSIndexPath *indexPath = [self.postsTableView indexPathForCell:cell];
-    //do cell for row at index path to get the dictionary
-    PFObject *postToPass = self.posts[indexPath.row];
-    DetailViewController *detailVC = [segue destinationViewController];
-    detailVC.post = postToPass;
+    if ([[segue identifier] isEqualToString:@"DetailSegue"]) {
+        PostCell *cell = sender;
+        NSIndexPath *indexPath = [self.postsTableView indexPathForCell:cell];
+        //do cell for row at index path to get the dictionary
+        PFObject *postToPass = self.posts[indexPath.row];
+        DetailViewController *detailVC = [segue destinationViewController];
+        detailVC.post = postToPass;
+    }
+    
 }
 
 
