@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="61.607142857142854"/>
         </scene>
-        <!--Home Feed View Controller-->
+        <!--navbar-->
         <scene sceneID="my4-3z-Vmj">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="mpG-7O-cZY" customClass="HomeFeedViewController" sceneMemberID="viewController">
@@ -86,17 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-pj-Kfn">
-                                <rect key="frame" x="304" y="56" width="90" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Post"/>
-                                <connections>
-                                    <segue destination="GxZ-N0-MaQ" kind="presentation" identifier="PostSegue" id="wW8-b8-uCF"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tbm-F8-H4N">
-                                <rect key="frame" x="0.0" y="95" width="414" height="747"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="748"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -141,7 +132,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsv-7i-eAx">
-                                <rect key="frame" x="20" y="56" width="111" height="31"/>
+                                <rect key="frame" x="20" y="54" width="99" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
@@ -149,11 +140,20 @@
                                     <action selector="didLogout:" destination="mpG-7O-cZY" eventType="touchUpInside" id="OT5-pm-rBh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-pj-Kfn">
+                                <rect key="frame" x="304" y="54" width="90" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Post"/>
+                                <connections>
+                                    <segue destination="GxZ-N0-MaQ" kind="presentation" identifier="PostSegue" id="wW8-b8-uCF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y6i-df-29Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZP3-cB-yhq"/>
+                    <navigationItem key="navigationItem" title="navbar" id="rsr-Tt-dIh"/>
                     <connections>
                         <outlet property="postsTableView" destination="Tbm-F8-H4N" id="w4L-Mk-0jb"/>
                     </connections>
