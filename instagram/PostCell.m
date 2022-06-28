@@ -26,5 +26,10 @@
     self.postImage.file = post[@"image"];
     [self.postImage loadInBackground];
 }
+- (IBAction)didLike:(id)sender {
+    
+}
+- (IBAction)didComment:(id)sender {
+}
 
 @end

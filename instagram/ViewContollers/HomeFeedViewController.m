@@ -84,14 +84,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
     Post *post = self.posts[indexPath.row];
-    
+    //buttons
+    NSString *likeString = [post[@"likeCount"] stringValue];
+    [cell.likeBtn setTitle:likeString forState:UIControlStateNormal];
+    NSString *commentString = [post[@"commentCount"] stringValue];
+    [cell.messageBtn setTitle:commentString forState:UIControlStateNormal];
+    //labels
     cell.postCaption.text = post[@"caption"];
     cell.usernameField.text = post.author.username;
     cell.postImage.file = post[@"image"];
     cell.dateLabel.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  post.createdAt.shortTimeAgoSinceNow, @" ago"];
+    //image
     [cell.postImage loadInBackground];
-    NSLog(@"image");
-    NSLog(@"@%@", post[@"image"]);
     NSLog(@"@%@", cell.postImage.image);
     return cell;
 }

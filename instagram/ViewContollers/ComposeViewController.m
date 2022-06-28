@@ -17,7 +17,20 @@
 @implementation ComposeViewController
 
 - (void)viewDidLoad {
+   
     [super viewDidLoad];
+    [self.toPostImage.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [self.toPostImage.layer setBorderWidth: 1.5];
+}
+- (IBAction)changeImage:(id)sender {
+    [self getImagePicker];
+}
+
+- (IBAction)didTapImage:(id)sender {
+    [self getImagePicker];
+}
+
+- (void)getImagePicker {
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
     imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
