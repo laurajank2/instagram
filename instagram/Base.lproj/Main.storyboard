@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tbm-F8-H4N">
-                                <rect key="frame" x="0.0" y="94" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -219,6 +219,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-fQ-6TK">
+                                <rect key="frame" x="318" y="453" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qTp-P2-TsF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -227,9 +233,11 @@
                             <constraint firstItem="8Kc-zU-SaR" firstAttribute="top" secondItem="gfu-yb-gI6" secondAttribute="bottom" constant="15" id="4nw-du-Qep"/>
                             <constraint firstItem="qTp-P2-TsF" firstAttribute="trailing" secondItem="gfu-yb-gI6" secondAttribute="trailing" constant="20" id="8Aw-qV-IW0"/>
                             <constraint firstItem="tkf-3f-Kl7" firstAttribute="leading" secondItem="qTp-P2-TsF" secondAttribute="leading" id="Oeg-EI-9Cm"/>
+                            <constraint firstItem="qTp-P2-TsF" firstAttribute="trailing" secondItem="IsM-fQ-6TK" secondAttribute="trailing" constant="20" id="Oxf-OS-wif"/>
                             <constraint firstItem="gfu-yb-gI6" firstAttribute="leading" secondItem="qTp-P2-TsF" secondAttribute="leading" constant="20" id="R4i-YX-QkQ"/>
                             <constraint firstItem="qTp-P2-TsF" firstAttribute="trailing" secondItem="8Kc-zU-SaR" secondAttribute="trailing" constant="20" id="elJ-go-dCL"/>
                             <constraint firstItem="gfu-yb-gI6" firstAttribute="top" secondItem="tkf-3f-Kl7" secondAttribute="bottom" constant="8" symbolic="YES" id="let-Gy-xbC"/>
+                            <constraint firstItem="IsM-fQ-6TK" firstAttribute="top" secondItem="tkf-3f-Kl7" secondAttribute="bottom" constant="7" id="pHi-iN-uyz"/>
                             <constraint firstItem="8Kc-zU-SaR" firstAttribute="leading" secondItem="qTp-P2-TsF" secondAttribute="leading" constant="20" id="qvV-09-XfZ"/>
                         </constraints>
                     </view>
@@ -237,6 +245,7 @@
                         <outlet property="caption" destination="8Kc-zU-SaR" id="Ky9-KP-x0y"/>
                         <outlet property="detailImage" destination="tkf-3f-Kl7" id="hJa-LB-XyY"/>
                         <outlet property="timeStamp" destination="gfu-yb-gI6" id="wZ2-OT-tSf"/>
+                        <outlet property="username" destination="IsM-fQ-6TK" id="ez6-5T-kOB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keu-oo-bhQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

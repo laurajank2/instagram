@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet PFImageView *detailImage;
 @property (weak, nonatomic) IBOutlet UILabel *timeStamp;
 @property (weak, nonatomic) IBOutlet UILabel *caption;
+@property (weak, nonatomic) IBOutlet UILabel *username;
 
 @end
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.username.text = self.post.author.username;
     self.caption.text = self.post[@"caption"];
     self.timeStamp.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  self.post.createdAt.shortTimeAgoSinceNow, @" hours ago"];
     self.detailImage.file = self.post[@"image"];

@@ -66,7 +66,10 @@
 
 
 - (IBAction)postThis:(id)sender {
-    [Post postUserImage:[self resizeImage:self.toPostImage.image withSize:self.toPostImage.bounds.size] withCaption:self.toPostCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+    CGFloat width = self.toPostImage.bounds.size.width * 10;
+    CGFloat height = self.toPostImage.bounds.size.height * 10;
+    CGSize newSize = CGSizeMake(width, height);
+    [Post postUserImage:[self resizeImage:self.toPostImage.image withSize:newSize] withCaption:self.toPostCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded) {
             NSLog(@"Successfully posted image!");
             [self.delegate didPost];
