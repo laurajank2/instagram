@@ -10,11 +10,13 @@
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
 #import "DetailViewController.h"
+#import "ComposeViewController.h"
 #import "Post.h"
 #import "PostCell.h"
 #import "DateTools.h"
 
-@interface HomeFeedViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@interface HomeFeedViewController ()<ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *posts;
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -67,6 +69,10 @@
     
 }
 
+- (void)didPost {
+    [self fetchPosts];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
 }
@@ -82,7 +88,7 @@
     cell.postCaption.text = post[@"caption"];
     cell.usernameField.text = post.author.username;
     cell.postImage.file = post[@"image"];
-    cell.dateLabel.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  post.createdAt.shortTimeAgoSinceNow, @" hours ago"];
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  post.createdAt.shortTimeAgoSinceNow, @" ago"];
     [cell.postImage loadInBackground];
     NSLog(@"image");
     NSLog(@"@%@", post[@"image"]);
@@ -104,6 +110,11 @@
         PFObject *postToPass = self.posts[indexPath.row];
         DetailViewController *detailVC = [segue destinationViewController];
         detailVC.post = postToPass;
+    } else if ([[segue identifier] isEqualToString:@"PostSegue"]) {
+        UINavigationController *navVC = [segue destinationViewController];
+        ComposeViewController *composeVC = navVC.topViewController;
+        composeVC.delegate = self;
+        NSLog(@"@%@", composeVC.delegate);
     }
     
 }

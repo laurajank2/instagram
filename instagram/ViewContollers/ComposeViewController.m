@@ -69,6 +69,7 @@
     [Post postUserImage:[self resizeImage:self.toPostImage.image withSize:self.toPostImage.bounds.size] withCaption:self.toPostCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         if(succeeded) {
             NSLog(@"Successfully posted image!");
+            [self.delegate didPost];
             [self dismissViewControllerAnimated:YES completion:nil];
             
         } else {

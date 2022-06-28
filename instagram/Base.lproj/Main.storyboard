@@ -149,8 +149,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsv-7i-eAx">
-                                <rect key="frame" x="20" y="54" width="99" height="32"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y6i-df-29Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="navbar" id="rsr-Tt-dIh">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="uYe-Rp-UFX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gsv-7i-eAx">
+                                <rect key="frame" x="20" y="11" width="99" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
@@ -158,8 +164,10 @@
                                     <action selector="didLogout:" destination="mpG-7O-cZY" eventType="touchUpInside" id="OT5-pm-rBh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-pj-Kfn">
-                                <rect key="frame" x="304" y="54" width="90" height="32"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="CZb-Ao-S4X">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="d5M-pj-Kfn">
+                                <rect key="frame" x="304" y="12" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Post"/>
@@ -167,11 +175,8 @@
                                     <segue destination="GxZ-N0-MaQ" kind="presentation" identifier="PostSegue" id="wW8-b8-uCF"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="y6i-df-29Y"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="navbar" id="rsr-Tt-dIh"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="postsTableView" destination="Tbm-F8-H4N" id="w4L-Mk-0jb"/>
                     </connections>
@@ -312,7 +317,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rJK-ug-rDR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FyL-zL-2Bj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNav" automaticallyAdjustsScrollViewInsets="NO" id="FyL-zL-2Bj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s3N-Bm-JoN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
