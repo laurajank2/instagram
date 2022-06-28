@@ -92,9 +92,9 @@
     //labels
     cell.postCaption.text = post[@"caption"];
     cell.usernameField.text = post.author.username;
-    cell.postImage.file = post[@"image"];
     cell.dateLabel.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  post.createdAt.shortTimeAgoSinceNow, @" ago"];
     //image
+    cell.postImage.file = post[@"image"];
     [cell.postImage loadInBackground];
     NSLog(@"@%@", cell.postImage.image);
     return cell;

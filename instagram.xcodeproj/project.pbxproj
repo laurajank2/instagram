@@ -13,6 +13,8 @@
 		833B1A35286A61EB004E9D0C /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B1A34286A61EB004E9D0C /* Post.m */; };
 		833B1A38286A6ACC004E9D0C /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B1A37286A6ACC004E9D0C /* PostCell.m */; };
 		833B1A3C286B6C49004E9D0C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B1A3B286B6C49004E9D0C /* DetailViewController.m */; };
+		833B1A3F286BB399004E9D0C /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B1A3E286BB399004E9D0C /* ProfileViewController.m */; };
+		833B1A46286BBB3C004E9D0C /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B1A45286BBB3C004E9D0C /* ProfileCell.m */; };
 		83A00DFC286A4289000334FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A00DFB286A4289000334FC /* AppDelegate.m */; };
 		83A00DFF286A4289000334FC /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A00DFE286A4289000334FC /* SceneDelegate.m */; };
 		83A00E02286A4289000334FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A00E01286A4289000334FC /* ViewController.m */; };
@@ -64,6 +66,10 @@
 		833B1A37286A6ACC004E9D0C /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		833B1A3A286B6C49004E9D0C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		833B1A3B286B6C49004E9D0C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		833B1A3D286BB399004E9D0C /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		833B1A3E286BB399004E9D0C /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		833B1A44286BBB3C004E9D0C /* ProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
+		833B1A45286BBB3C004E9D0C /* ProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		83A00DF7286A4289000334FC /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A00DFA286A4289000334FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83A00DFB286A4289000334FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,8 +156,21 @@
 				831836FA286A5507000A2B81 /* LoginViewController.m */,
 				83A00E00286A4289000334FC /* ViewController.h */,
 				83A00E01286A4289000334FC /* ViewController.m */,
+				833B1A3D286BB399004E9D0C /* ProfileViewController.h */,
+				833B1A3E286BB399004E9D0C /* ProfileViewController.m */,
 			);
 			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		833B1A43286BB976004E9D0C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				833B1A36286A6ACC004E9D0C /* PostCell.h */,
+				833B1A37286A6ACC004E9D0C /* PostCell.m */,
+				833B1A44286BBB3C004E9D0C /* ProfileCell.h */,
+				833B1A45286BBB3C004E9D0C /* ProfileCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		83A00DEE286A4289000334FC = {
@@ -179,9 +198,8 @@
 		83A00DF9286A4289000334FC /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				833B1A43286BB976004E9D0C /* Cells */,
 				833B1A39286A7ED4004E9D0C /* ViewContollers */,
-				833B1A36286A6ACC004E9D0C /* PostCell.h */,
-				833B1A37286A6ACC004E9D0C /* PostCell.m */,
 				83A00DFA286A4289000334FC /* AppDelegate.h */,
 				83A00DFB286A4289000334FC /* AppDelegate.m */,
 				83A00DFD286A4289000334FC /* SceneDelegate.h */,
@@ -453,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A00E02286A4289000334FC /* ViewController.m in Sources */,
+				833B1A46286BBB3C004E9D0C /* ProfileCell.m in Sources */,
 				831836FE286A55EA000A2B81 /* HomeFeedViewController.m in Sources */,
 				83A00DFC286A4289000334FC /* AppDelegate.m in Sources */,
 				83A00E0D286A4289000334FC /* main.m in Sources */,
@@ -460,6 +479,7 @@
 				833B1A3C286B6C49004E9D0C /* DetailViewController.m in Sources */,
 				833B1A38286A6ACC004E9D0C /* PostCell.m in Sources */,
 				83A00DFF286A4289000334FC /* SceneDelegate.m in Sources */,
+				833B1A3F286BB399004E9D0C /* ProfileViewController.m in Sources */,
 				831836FB286A5507000A2B81 /* LoginViewController.m in Sources */,
 				833B1A35286A61EB004E9D0C /* Post.m in Sources */,
 			);
