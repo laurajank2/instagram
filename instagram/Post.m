@@ -6,6 +6,7 @@
 //
 
 #import "Post.h"
+#import "DateTools.h"
 
 @implementation Post
 
@@ -30,11 +31,7 @@
     newPost.caption = caption;
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
-    NSDate *date = [NSDate date];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"%H:%M:%S"];
-    NSString *timeString = [formatter stringFromDate:date];
-    newPost.createdAt = timeString;
+//    newPost.createdAt = ;
     
     [newPost saveInBackgroundWithBlock: completion];
 }

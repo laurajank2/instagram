@@ -8,6 +8,7 @@
 #import "DetailViewController.h"
 #import <Parse/Parse.h>
 #import "Post.h"
+#import "DateTools.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet PFImageView *detailImage;
@@ -22,9 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.caption.text = self.post[@"caption"];
-    self.timeStamp.text = self.post[@"createdAt"];
-    NSLog(@"createdAt");
-    NSLog(@"@%@", self.post[@"createdAt"]);
+    self.timeStamp.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  self.post.createdAt.shortTimeAgoSinceNow, @" hours ago"];
     self.detailImage.file = self.post[@"image"];
     [self.detailImage loadInBackground];
 }
