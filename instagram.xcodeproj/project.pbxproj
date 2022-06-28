@@ -134,6 +134,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		833B1A39286A7ED4004E9D0C /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				831836FD286A55EA000A2B81 /* HomeFeedViewController.m */,
+				831836FC286A55EA000A2B81 /* HomeFeedViewController.h */,
+				83183700286A5DEA000A2B81 /* ComposeViewController.m */,
+				831836FF286A5DEA000A2B81 /* ComposeViewController.h */,
+				831836F9286A5507000A2B81 /* LoginViewController.h */,
+				831836FA286A5507000A2B81 /* LoginViewController.m */,
+				83A00E00286A4289000334FC /* ViewController.h */,
+				83A00E01286A4289000334FC /* ViewController.m */,
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
 		83A00DEE286A4289000334FC = {
 			isa = PBXGroup;
 			children = (
@@ -159,23 +174,16 @@
 		83A00DF9286A4289000334FC /* instagram */ = {
 			isa = PBXGroup;
 			children = (
-				831836FC286A55EA000A2B81 /* HomeFeedViewController.h */,
-				831836FD286A55EA000A2B81 /* HomeFeedViewController.m */,
+				833B1A39286A7ED4004E9D0C /* ViewContollers */,
 				833B1A36286A6ACC004E9D0C /* PostCell.h */,
 				833B1A37286A6ACC004E9D0C /* PostCell.m */,
 				83A00DFA286A4289000334FC /* AppDelegate.h */,
 				83A00DFB286A4289000334FC /* AppDelegate.m */,
 				83A00DFD286A4289000334FC /* SceneDelegate.h */,
 				83A00DFE286A4289000334FC /* SceneDelegate.m */,
-				83A00E00286A4289000334FC /* ViewController.h */,
-				83A00E01286A4289000334FC /* ViewController.m */,
 				83A00E03286A4289000334FC /* Main.storyboard */,
 				833B1A33286A61EB004E9D0C /* Post.h */,
 				833B1A34286A61EB004E9D0C /* Post.m */,
-				831836FF286A5DEA000A2B81 /* ComposeViewController.h */,
-				83183700286A5DEA000A2B81 /* ComposeViewController.m */,
-				831836F9286A5507000A2B81 /* LoginViewController.h */,
-				831836FA286A5507000A2B81 /* LoginViewController.m */,
 				83A00E06286A4289000334FC /* Assets.xcassets */,
 				83A00E08286A4289000334FC /* LaunchScreen.storyboard */,
 				83A00E0B286A4289000334FC /* Info.plist */,
