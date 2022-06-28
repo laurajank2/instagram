@@ -133,6 +133,7 @@
                                         <connections>
                                             <outlet property="postCaption" destination="GyX-AJ-4df" id="u7G-EN-GSf"/>
                                             <outlet property="postImage" destination="0XZ-Jd-axM" id="jsY-0d-YC8"/>
+                                            <segue destination="eE0-VV-MER" kind="presentation" id="dsX-cu-gLR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -158,6 +159,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcK-Tt-njt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1802.8985507246377" y="61.607142857142854"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="sJJ-Bu-SOo">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="eE0-VV-MER" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sgu-KH-ITs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tkf-3f-Kl7" customClass="PFImageView">
+                                <rect key="frame" x="0.0" y="63" width="414" height="383"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="383" id="65D-7F-3Cn"/>
+                                    <constraint firstAttribute="width" constant="414" id="euV-CX-CEZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfu-yb-gI6">
+                                <rect key="frame" x="20" y="454" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kc-zU-SaR">
+                                <rect key="frame" x="20" y="506" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qTp-P2-TsF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tkf-3f-Kl7" firstAttribute="top" secondItem="qTp-P2-TsF" secondAttribute="top" constant="19" id="46o-tS-79y"/>
+                            <constraint firstItem="8Kc-zU-SaR" firstAttribute="top" secondItem="gfu-yb-gI6" secondAttribute="bottom" constant="31" id="4nw-du-Qep"/>
+                            <constraint firstItem="qTp-P2-TsF" firstAttribute="trailing" secondItem="gfu-yb-gI6" secondAttribute="trailing" constant="313" id="FWR-kq-vUI"/>
+                            <constraint firstItem="qTp-P2-TsF" firstAttribute="trailing" secondItem="tkf-3f-Kl7" secondAttribute="trailing" id="H6g-Lm-rAb"/>
+                            <constraint firstItem="qTp-P2-TsF" firstAttribute="trailing" secondItem="8Kc-zU-SaR" secondAttribute="trailing" constant="337" id="Jsn-7o-NVO"/>
+                            <constraint firstItem="tkf-3f-Kl7" firstAttribute="leading" secondItem="qTp-P2-TsF" secondAttribute="leading" id="Oeg-EI-9Cm"/>
+                            <constraint firstItem="gfu-yb-gI6" firstAttribute="leading" secondItem="qTp-P2-TsF" secondAttribute="leading" constant="20" id="R4i-YX-QkQ"/>
+                            <constraint firstItem="gfu-yb-gI6" firstAttribute="top" secondItem="tkf-3f-Kl7" secondAttribute="bottom" constant="8" symbolic="YES" id="let-Gy-xbC"/>
+                            <constraint firstItem="8Kc-zU-SaR" firstAttribute="leading" secondItem="qTp-P2-TsF" secondAttribute="leading" constant="20" id="qvV-09-XfZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="caption" destination="8Kc-zU-SaR" id="Ky9-KP-x0y"/>
+                        <outlet property="detailImage" destination="tkf-3f-Kl7" id="hJa-LB-XyY"/>
+                        <outlet property="timeStamp" destination="gfu-yb-gI6" id="wZ2-OT-tSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keu-oo-bhQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802.8985507246377" y="838.39285714285711"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="g2Y-7Z-Rgb">

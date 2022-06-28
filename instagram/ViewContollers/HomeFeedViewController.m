@@ -9,6 +9,7 @@
 #import <Parse/Parse.h>
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
+#import "DetailViewController.h"
 #import "Post.h"
 #import "PostCell.h"
 
@@ -86,14 +87,20 @@
     return cell;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    PostCell *cell = sender;
+    NSIndexPath *indexPath = [self.postsTableView indexPathForCell:cell];
+    //do cell for row at index path to get the dictionary
+    PFObject *postToPass = self.posts[indexPath.row];
+    DetailViewController *detailVC = [segue destinationViewController];
+    detailVC.post = postToPass;
 }
-*/
+
 
 @end
