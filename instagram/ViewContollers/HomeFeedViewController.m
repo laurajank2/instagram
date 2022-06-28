@@ -12,6 +12,7 @@
 #import "DetailViewController.h"
 #import "Post.h"
 #import "PostCell.h"
+#import "DateTools.h"
 
 @interface HomeFeedViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *posts;
@@ -81,6 +82,7 @@
     cell.postCaption.text = post[@"caption"];
     cell.usernameField.text = post.author.username;
     cell.postImage.file = post[@"image"];
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  post.createdAt.shortTimeAgoSinceNow, @" hours ago"];
     [cell.postImage loadInBackground];
     NSLog(@"image");
     NSLog(@"@%@", post[@"image"]);
