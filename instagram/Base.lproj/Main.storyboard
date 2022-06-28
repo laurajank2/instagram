@@ -91,41 +91,59 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="470" id="lwz-kI-A4i" customClass="PostCell">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="470"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="481" id="lwz-kI-A4i" customClass="PostCell">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="481"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lwz-kI-A4i" id="S7K-8L-khe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="470"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="481"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0XZ-Jd-axM" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="11" width="414" height="394"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0XZ-Jd-axM" customClass="PFImageView">
+                                                    <rect key="frame" x="20" y="18" width="374" height="374"/>
                                                     <color key="backgroundColor" name="AccentColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="394" id="Jyw-lS-L8S"/>
                                                         <constraint firstAttribute="width" constant="414" id="xoh-MS-eDd"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample post caption: This cat is super cute!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyX-AJ-4df">
-                                                    <rect key="frame" x="41" y="413" width="332" height="47"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL4-iD-mf1">
+                                                    <rect key="frame" x="20" y="400" width="79" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaY-Jm-nEb">
+                                                    <rect key="frame" x="297" y="399" width="97" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sample post caption: This cat is super cute!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyX-AJ-4df">
+                                                    <rect key="frame" x="20" y="429" width="374" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="VaY-Jm-nEb" firstAttribute="top" secondItem="S7K-8L-khe" secondAttribute="top" constant="399" id="0WA-Ga-SnP"/>
+                                                <constraint firstItem="wL4-iD-mf1" firstAttribute="leading" secondItem="S7K-8L-khe" secondAttribute="leading" constant="20" symbolic="YES" id="7T2-KL-mUI"/>
+                                                <constraint firstItem="wL4-iD-mf1" firstAttribute="top" secondItem="S7K-8L-khe" secondAttribute="top" constant="400" id="EVJ-mn-e7i"/>
                                                 <constraint firstItem="0XZ-Jd-axM" firstAttribute="top" secondItem="S7K-8L-khe" secondAttribute="top" constant="11" id="H2O-pS-zf7"/>
                                                 <constraint firstAttribute="bottom" secondItem="GyX-AJ-4df" secondAttribute="bottom" constant="10" id="K8U-Ni-85Y"/>
                                                 <constraint firstItem="0XZ-Jd-axM" firstAttribute="leading" secondItem="S7K-8L-khe" secondAttribute="leading" id="KcF-kl-wRn"/>
-                                                <constraint firstItem="GyX-AJ-4df" firstAttribute="top" secondItem="0XZ-Jd-axM" secondAttribute="bottom" constant="8" symbolic="YES" id="OPr-5j-tCd"/>
+                                                <constraint firstItem="GyX-AJ-4df" firstAttribute="top" secondItem="0XZ-Jd-axM" secondAttribute="bottom" constant="30" id="OPr-5j-tCd"/>
                                                 <constraint firstAttribute="trailing" secondItem="0XZ-Jd-axM" secondAttribute="trailing" id="RHN-bc-JXI"/>
+                                                <constraint firstAttribute="trailing" secondItem="VaY-Jm-nEb" secondAttribute="trailing" constant="20" symbolic="YES" id="aKp-GP-jDR"/>
                                                 <constraint firstItem="GyX-AJ-4df" firstAttribute="leading" secondItem="S7K-8L-khe" secondAttribute="leading" constant="41" id="lGn-U2-gwV"/>
                                                 <constraint firstAttribute="trailing" secondItem="GyX-AJ-4df" secondAttribute="trailing" constant="41" id="tRe-EA-iag"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="VaY-Jm-nEb" id="8Ff-ZL-Jd0"/>
                                             <outlet property="postCaption" destination="GyX-AJ-4df" id="u7G-EN-GSf"/>
                                             <outlet property="postImage" destination="0XZ-Jd-axM" id="jsY-0d-YC8"/>
+                                            <outlet property="usernameField" destination="wL4-iD-mf1" id="rLU-nZ-Hn8"/>
                                             <segue destination="eE0-VV-MER" kind="presentation" identifier="DetailSegue" id="dsX-cu-gLR"/>
                                         </connections>
                                     </tableViewCell>

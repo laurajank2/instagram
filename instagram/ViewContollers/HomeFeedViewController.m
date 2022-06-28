@@ -76,9 +76,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
-    PFObject *post = self.posts[indexPath.row];
+    Post *post = self.posts[indexPath.row];
     
     cell.postCaption.text = post[@"caption"];
+    cell.usernameField.text = post.author.username;
     cell.postImage.file = post[@"image"];
     [cell.postImage loadInBackground];
     NSLog(@"image");
