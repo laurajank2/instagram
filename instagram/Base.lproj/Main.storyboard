@@ -445,7 +445,19 @@
                             <constraint firstItem="Fxt-W0-ukL" firstAttribute="top" secondItem="8tR-cw-F7Q" secondAttribute="bottom" constant="35" id="s22-hE-QrP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BMc-JM-i2C"/>
+                    <navigationItem key="navigationItem" id="BMc-JM-i2C">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hP9-WG-jNv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1Bg-eV-Pac">
+                                <rect key="frame" x="269" y="6" width="125" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit Profile" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="kow-7P-tK8" kind="presentation" identifier="editSegue" id="GDC-dq-ND2"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileFeed" destination="Fxt-W0-ukL" id="Mwu-TO-Ah2"/>
                         <outlet property="profileImage" destination="HWn-IW-BNW" id="r6k-Ai-v33"/>
@@ -455,6 +467,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgT-Gj-Y4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1105.7971014492755" y="61.607142857142854"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="DIl-K7-3RK">
+            <objects>
+                <viewController id="kow-7P-tK8" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MzX-bb-eIi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3n7-0V-WDG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ZO-VT-lUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146" y="62"/>
         </scene>
         <!--Home-->
         <scene sceneID="rJK-ug-rDR">
