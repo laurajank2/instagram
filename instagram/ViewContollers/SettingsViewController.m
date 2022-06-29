@@ -11,7 +11,8 @@
 
 @interface SettingsViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet PFImageView *profileImage;
-@property (weak, nonatomic) IBOutlet UITextView *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+
 @property (weak, nonatomic) IBOutlet UITextView *bioField;
 @property (weak, nonatomic) IBOutlet UIButton *changePicBtn;
 @property (strong, nonatomic) PFUser *user;
@@ -44,7 +45,6 @@
     // TODO: Check the proposed new text character count
     // Set the max character limit
     // Construct what the new text would be if we allowed the user's latest edit
-    self.user[@"username"] = self.usernameField.text;
     self.user[@"bio"] = self.bioField.text;
     [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
@@ -56,7 +56,21 @@
 
          }
     }];
-    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    self.user[@"username"] = self.usernameField.text;
+    [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(error){
+              NSLog(@"Error posting: %@", error.localizedDescription);
+         }
+         else{
+             NSLog(@"Successfully posted");
+             [self.delegate didChange];
+
+         }
+    }];
+}
 
 
 - (void)getImagePicker {

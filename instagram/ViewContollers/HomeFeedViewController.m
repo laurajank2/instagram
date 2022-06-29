@@ -96,7 +96,8 @@
     //image
     cell.postImage.file = post[@"image"];
     [cell.postImage loadInBackground];
-    NSLog(@"@%@", cell.postImage.image);
+    cell.userImage.file = post.author[@"profileImage"];
+    [cell.userImage loadInBackground];
     return cell;
 }
 
