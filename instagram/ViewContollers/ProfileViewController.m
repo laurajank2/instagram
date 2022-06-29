@@ -11,7 +11,7 @@
 #import "ProfileCell.h"
 #import "SettingsViewController.h"
 
-@interface ProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ProfileViewController () <SettingsViewControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet PFImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UICollectionView *profileFeed;
@@ -38,6 +38,19 @@
     [self.profileImage loadInBackground];
     [self fetchPosts];
     
+}
+
+- (void)didChange {
+    PFUser *user = [PFUser currentUser];
+    self.usernameLabel.text = user.username;
+    self.bioField.text = user[@"bio"];
+    self.profileFeed.dataSource = self;
+    self.profileFeed.delegate = self;
+    NSLog(@"profileImage");
+    NSLog(@"%@", user[@"profileImage"]);
+    self.profileImage.file = user[@"profileImage"];
+    [self.profileImage loadInBackground];
+    [self fetchPosts];
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -84,6 +97,7 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"editSegue"]) {
        SettingsViewController *settingsVC = [segue destinationViewController];
+        settingsVC.delegate = self;
     }
 }
 

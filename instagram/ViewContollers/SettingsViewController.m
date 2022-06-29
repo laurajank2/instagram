@@ -52,9 +52,11 @@
          }
          else{
              NSLog(@"Successfully posted");
+             [self.delegate didChange];
+
          }
     }];
-}
+    }
 
 
 - (void)getImagePicker {
@@ -93,20 +95,19 @@
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
-    PFFileObject *imgFile = [self getPFFileFromImage:originalImage];
     self.profileImage.image = originalImage;
-    self.profileImage.file = imgFile;
-    NSLog(@"profile image file");
-    NSLog(@"@%@", imgFile);
+    CGFloat width = self.profileImage.bounds.size.width * 10;
+    CGFloat height = self.profileImage.bounds.size.height * 10;
+    CGSize newSize = CGSizeMake(width, height);
+    PFFileObject *imgFile = [self getPFFileFromImage:[self resizeImage:self.profileImage.image withSize:newSize]];
     self.user[@"profileImage"] = imgFile;
-    NSLog(@"profileImage2");
-    NSLog(@"%@", self.user[@"profileImage"]);
     [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
               NSLog(@"Error posting: %@", error.localizedDescription);
          }
          else{
              NSLog(@"Successfully posted");
+             [self.delegate didChange];
          }
     }];
     
