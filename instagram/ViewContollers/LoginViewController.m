@@ -38,9 +38,10 @@
                 
                 // manually segue to logged in view
                 // display view controller that needs to shown after successful login
-                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                HomeFeedViewController *homeVC = [storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
-                [self presentViewController:homeVC animated:YES completion:nil];
+//                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//                HomeFeedViewController *homeVC = [storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+//                [self presentViewController:homeVC animated:YES completion:nil];
+                [self performSegueWithIdentifier:@"loginSegue" sender:nil];
             }
         }];
 }
