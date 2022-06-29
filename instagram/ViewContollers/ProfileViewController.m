@@ -29,6 +29,10 @@
     self.usernameLabel.text = user.username;
     self.profileFeed.dataSource = self;
     self.profileFeed.delegate = self;
+    NSLog(@"profileImage");
+    NSLog(@"%@", user[@"profileImage"]);
+    self.profileImage.file = user[@"profileImage"];
+    [self.profileImage loadInBackground];
     [self fetchPosts];
     
 }
@@ -109,9 +113,24 @@
     // Get the image captured by the UIImagePickerController
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    PFFileObject *imgFile = [self getPFFileFromImage:originalImage];
     self.profileImage.image = originalImage;
+    self.profileImage.file = imgFile;
     PFUser *user = [PFUser currentUser];
-    //user.profileImage = self.profileImage.image;
+    NSLog(@"profile image file");
+    NSLog(@"@%@", imgFile);
+    user[@"profileImage"] = imgFile;
+    NSLog(@"profileImage2");
+    NSLog(@"%@", user[@"profileImage"]);
+    [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if(error){
+              NSLog(@"Error posting: %@", error.localizedDescription);
+         }
+         else{
+             NSLog(@"Successfully posted");
+         }
+    }];
+    
     
     
 
@@ -119,6 +138,22 @@
     
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
+ 
+    // check if image is not nil
+    if (!image) {
+        return nil;
+    }
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    // get image data and check if that is not nil
+    if (!imageData) {
+        return nil;
+    }
+    
+    return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
 
 
