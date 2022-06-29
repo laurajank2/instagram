@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet PFImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UICollectionView *profileFeed;
 @property (nonatomic, strong) NSArray *profilePosts;
+@property (weak, nonatomic) IBOutlet UILabel *bioField;
 
 @end
 
@@ -28,6 +29,7 @@
     // Do any additional setup after loading the view.
     PFUser *user = [PFUser currentUser];
     self.usernameLabel.text = user.username;
+    self.bioField.text = user[@"bio"];
     self.profileFeed.dataSource = self;
     self.profileFeed.delegate = self;
     NSLog(@"profileImage");

@@ -29,9 +29,11 @@
     // Do any additional setup after loading the view.
     PFUser *user = [PFUser currentUser];
     self.usernameField.text = user.username;
+    self.bioField.text = user[@"bio"];
     self.profileImage.file = user[@"profileImage"];
     [self.profileImage loadInBackground];
     self.usernameField.delegate = self;
+    self.bioField.delegate = self;
 }
 
 - (IBAction)setImage:(id)sender {
@@ -43,6 +45,7 @@
     // Set the max character limit
     // Construct what the new text would be if we allowed the user's latest edit
     self.user[@"username"] = self.usernameField.text;
+    self.user[@"bio"] = self.bioField.text;
     [self.user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if(error){
               NSLog(@"Error posting: %@", error.localizedDescription);

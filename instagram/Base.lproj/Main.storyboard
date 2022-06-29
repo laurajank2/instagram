@@ -421,6 +421,15 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-8f-kkf">
+                                <rect key="frame" x="146" y="83" width="248" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="101" id="gEd-iS-me8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tW1-ag-FwO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -428,7 +437,10 @@
                             <constraint firstItem="Fxt-W0-ukL" firstAttribute="leading" secondItem="tW1-ag-FwO" secondAttribute="leading" constant="20" id="9GG-Fh-3Si"/>
                             <constraint firstItem="HWn-IW-BNW" firstAttribute="top" secondItem="tW1-ag-FwO" secondAttribute="top" id="Dea-gr-F39"/>
                             <constraint firstItem="Fxt-W0-ukL" firstAttribute="top" secondItem="HWn-IW-BNW" secondAttribute="bottom" constant="20" id="Nv0-H7-ejO"/>
+                            <constraint firstItem="nSX-8f-kkf" firstAttribute="leading" secondItem="HWn-IW-BNW" secondAttribute="trailing" constant="8" symbolic="YES" id="Pqm-Xb-eKc"/>
                             <constraint firstItem="OYu-FF-ld8" firstAttribute="top" secondItem="tW1-ag-FwO" secondAttribute="top" id="S0n-PT-POQ"/>
+                            <constraint firstItem="nSX-8f-kkf" firstAttribute="firstBaseline" secondItem="OYu-FF-ld8" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="XZ2-QG-Y2m"/>
+                            <constraint firstItem="tW1-ag-FwO" firstAttribute="trailing" secondItem="nSX-8f-kkf" secondAttribute="trailing" constant="20" id="ajq-jX-Csx"/>
                             <constraint firstItem="tW1-ag-FwO" firstAttribute="trailing" secondItem="Fxt-W0-ukL" secondAttribute="trailing" constant="20" id="dcJ-PS-otE"/>
                             <constraint firstItem="HWn-IW-BNW" firstAttribute="top" secondItem="OYu-FF-ld8" secondAttribute="top" id="gTn-gw-PKK"/>
                             <constraint firstItem="HWn-IW-BNW" firstAttribute="leading" secondItem="tW1-ag-FwO" secondAttribute="leading" constant="20" id="ism-93-9nO"/>
@@ -450,6 +462,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bioField" destination="nSX-8f-kkf" id="Qh7-3X-JrK"/>
                         <outlet property="profileFeed" destination="Fxt-W0-ukL" id="Mwu-TO-Ah2"/>
                         <outlet property="profileImage" destination="HWn-IW-BNW" id="r6k-Ai-v33"/>
                         <outlet property="usernameLabel" destination="OYu-FF-ld8" id="R3s-Nu-KZ2"/>
@@ -467,7 +480,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-8r-OIg" customClass="PFImageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-8r-OIg" customClass="PFImageView">
                                 <rect key="frame" x="20" y="69" width="137" height="134"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
