@@ -382,8 +382,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYu-FF-ld8">
-                                <rect key="frame" x="146" y="56" width="79" height="19"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="146" y="56" width="137" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -421,8 +421,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-8f-kkf">
-                                <rect key="frame" x="146" y="83" width="248" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-8f-kkf">
+                                <rect key="frame" x="146" y="100" width="248" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="101" id="gEd-iS-me8"/>
                                 </constraints>
@@ -439,7 +439,7 @@
                             <constraint firstItem="Fxt-W0-ukL" firstAttribute="top" secondItem="HWn-IW-BNW" secondAttribute="bottom" constant="20" id="Nv0-H7-ejO"/>
                             <constraint firstItem="nSX-8f-kkf" firstAttribute="leading" secondItem="HWn-IW-BNW" secondAttribute="trailing" constant="8" symbolic="YES" id="Pqm-Xb-eKc"/>
                             <constraint firstItem="OYu-FF-ld8" firstAttribute="top" secondItem="tW1-ag-FwO" secondAttribute="top" id="S0n-PT-POQ"/>
-                            <constraint firstItem="nSX-8f-kkf" firstAttribute="firstBaseline" secondItem="OYu-FF-ld8" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="XZ2-QG-Y2m"/>
+                            <constraint firstItem="nSX-8f-kkf" firstAttribute="top" secondItem="OYu-FF-ld8" secondAttribute="bottom" constant="8" symbolic="YES" id="X3x-9y-q0u"/>
                             <constraint firstItem="tW1-ag-FwO" firstAttribute="trailing" secondItem="nSX-8f-kkf" secondAttribute="trailing" constant="20" id="ajq-jX-Csx"/>
                             <constraint firstItem="tW1-ag-FwO" firstAttribute="trailing" secondItem="Fxt-W0-ukL" secondAttribute="trailing" constant="20" id="dcJ-PS-otE"/>
                             <constraint firstItem="HWn-IW-BNW" firstAttribute="top" secondItem="OYu-FF-ld8" secondAttribute="top" id="gTn-gw-PKK"/>
@@ -514,18 +514,18 @@
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sample User" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-Jm-dG9">
-                                <rect key="frame" x="163" y="69" width="231" height="32"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Sample User" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-Jm-dG9">
+                                <rect key="frame" x="163" y="69" width="231" height="53"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="231" id="GI1-fb-ofQ"/>
                                     <constraint firstAttribute="height" constant="32" id="zgj-YS-7RK"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
