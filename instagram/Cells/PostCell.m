@@ -44,16 +44,11 @@
 
 //attempt to get likes to work
 - (IBAction)didLike:(id)sender {
-    if ([self.post[@"likeCount"] isEqual:nil]) {
-        NSInteger intLikeCount = [self.post[@"likeCount"] integerValue];
-        NSNumber *numberLikeCount = [NSNumber numberWithInteger: intLikeCount + 1];
-        NSLog(@"%@", numberLikeCount);
-        self.post.likeCount = numberLikeCount;
-        NSLog(@"%@", self.post.likeCount);
-    } else {
-        self.post[@"likeCount"] = @1;
-        NSLog(@"%@", self.post.likeCount);
-    }
+    NSInteger intLikeCount = [self.post[@"likeCount"] integerValue];
+    NSNumber *numberLikeCount = [NSNumber numberWithInteger: intLikeCount + 1];
+    NSLog(@"%@", numberLikeCount);
+    self.post.likeCount = numberLikeCount;
+    NSLog(@"%@", self.post.likeCount);
     [self.post saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         NSLog(@"saving");
         if(error){
@@ -61,7 +56,8 @@
          }
          else{
              NSLog(@"Successfully posted");
-
+             NSString *likeString = [self.post[@"likeCount"] stringValue];
+             [self.likeBtn setTitle:likeString forState:UIControlStateNormal];
          }
     }];
     
