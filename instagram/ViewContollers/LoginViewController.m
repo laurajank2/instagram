@@ -29,7 +29,6 @@
         newUser.username = self.usernameField.text;
         newUser.password = self.passwordField.text;
         NSMutableArray *myArray = [NSMutableArray new];
-        
         // call sign up function on the object
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
             if (error != nil) {

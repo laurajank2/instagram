@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *likeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *messageBtn;
 @property (weak, nonatomic) IBOutlet PFImageView *userImage;
-
+- (void)setPost:(Post *)newPost;
 @end
 
 NS_ASSUME_NONNULL_END
