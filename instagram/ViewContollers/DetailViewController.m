@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeStamp;
 @property (weak, nonatomic) IBOutlet UILabel *caption;
 @property (weak, nonatomic) IBOutlet UILabel *username;
+@property (weak, nonatomic) IBOutlet PFImageView *userImage;
 
 @end
 
@@ -28,6 +29,8 @@
     self.timeStamp.text = [NSString stringWithFormat:@"%@%@%@", @"Created ",  self.post.createdAt.shortTimeAgoSinceNow, @" hours ago"];
     self.detailImage.file = self.post[@"image"];
     [self.detailImage loadInBackground];
+    self.userImage.file = self.post.author[@"profileImage"];
+    [self.userImage loadInBackground];
 }
 
 /*
