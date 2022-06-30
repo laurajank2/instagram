@@ -178,6 +178,26 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		833B1A4C286E07A8004E9D0C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				83A00DFB286A4289000334FC /* AppDelegate.m */,
+				83A00DFA286A4289000334FC /* AppDelegate.h */,
+				83A00DFD286A4289000334FC /* SceneDelegate.h */,
+				83A00DFE286A4289000334FC /* SceneDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		833B1A4D286E07C2004E9D0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				833B1A34286A61EB004E9D0C /* Post.m */,
+				833B1A33286A61EB004E9D0C /* Post.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		83A00DEE286A4289000334FC = {
 			isa = PBXGroup;
 			children = (
@@ -203,15 +223,11 @@
 		83A00DF9286A4289000334FC /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				833B1A4D286E07C2004E9D0C /* Models */,
+				833B1A4C286E07A8004E9D0C /* Delegates */,
 				833B1A43286BB976004E9D0C /* Cells */,
 				833B1A39286A7ED4004E9D0C /* ViewContollers */,
-				83A00DFA286A4289000334FC /* AppDelegate.h */,
-				83A00DFB286A4289000334FC /* AppDelegate.m */,
-				83A00DFD286A4289000334FC /* SceneDelegate.h */,
-				83A00DFE286A4289000334FC /* SceneDelegate.m */,
 				83A00E03286A4289000334FC /* Main.storyboard */,
-				833B1A33286A61EB004E9D0C /* Post.h */,
-				833B1A34286A61EB004E9D0C /* Post.m */,
 				83A00E06286A4289000334FC /* Assets.xcassets */,
 				83A00E08286A4289000334FC /* LaunchScreen.storyboard */,
 				83A00E0B286A4289000334FC /* Info.plist */,

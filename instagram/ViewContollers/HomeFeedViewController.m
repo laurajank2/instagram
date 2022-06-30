@@ -15,7 +15,6 @@
 #import "PostCell.h"
 #import "DateTools.h"
 
-
 @interface HomeFeedViewController ()<ComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSArray *posts;
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
@@ -100,7 +99,6 @@
     [cell.userImage loadInBackground];
     return cell;
 }
-
 
 #pragma mark - Navigation
 

@@ -8,7 +8,6 @@
 #import <UIKit/UIKit.h>
 @import Parse;
 NS_ASSUME_NONNULL_BEGIN
-
 @interface ProfileCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet PFImageView *profilePostImage;
 
